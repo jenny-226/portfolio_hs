@@ -27,11 +27,10 @@
   /* ───── 빈 이미지 → 회색 점선 자리표시 ───── */
   function toPlaceholder(img) {
     const frame = img.closest('.frame');
-    const file = (img.getAttribute('src') || '').replace(/^assets\//, '');
     const ph = document.createElement('span');
     ph.className = 'ph';
-    ph.innerHTML = '<span>작업물 이미지 자리</span><code></code>';
-    ph.querySelector('code').textContent = file;
+    ph.innerHTML = '<span>이미지 준비 중</span><small></small>';
+    ph.querySelector('small').textContent = img.alt;
     ph.setAttribute('role', 'img');
     ph.setAttribute('aria-label', '이미지 준비 중: ' + img.alt);
     img.replaceWith(ph);
