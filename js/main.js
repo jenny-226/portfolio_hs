@@ -68,6 +68,59 @@
   box.addEventListener('click', e => { if (e.target === box) box.close(); });
   box.addEventListener('close', () => { boxImg.removeAttribute('src'); });
 
+  /* ───── 이미지 슬라이드 (이전 · 다음 · 점 · 스와이프 · 방향키) ───── */
+  document.querySelectorAll('[data-gallery]').forEach(gal => {
+    const slides = [...gal.querySelectorAll('.gallery-slide')];
+    const count = gal.querySelector('.gallery-count');
+    const title = gal.querySelector('.gallery-title');
+    const desc = gal.querySelector('.gallery-desc');
+    const dotsWrap = gal.querySelector('.gallery-dots');
+    let index = 0;
+
+    const dots = slides.map((s, i) => {
+      const d = document.createElement('button');
+      d.type = 'button';
+      d.setAttribute('role', 'tab');
+      d.setAttribute('aria-label', (i + 1) + '번째: ' + s.dataset.title);
+      d.addEventListener('click', () => go(i));
+      dotsWrap.appendChild(d);
+      return d;
+    });
+
+    function go(i) {
+      index = (i + slides.length) % slides.length;
+      slides.forEach((s, n) => { s.hidden = n !== index; });
+      dots.forEach((d, n) => d.setAttribute('aria-selected', n === index ? 'true' : 'false'));
+      const s = slides[index];
+      count.textContent = (index + 1) + ' / ' + slides.length;
+      title.textContent = s.dataset.title;
+      desc.textContent = s.dataset.desc;
+      // 다음 이미지를 미리 불러와 넘길 때 빈 화면이 보이지 않게
+      const next = slides[(index + 1) % slides.length].querySelector('img');
+      if (next) next.loading = 'eager';
+    }
+
+    gal.querySelector('.gallery-nav--prev').addEventListener('click', () => go(index - 1));
+    gal.querySelector('.gallery-nav--next').addEventListener('click', () => go(index + 1));
+    gal.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') go(index - 1);
+      if (e.key === 'ArrowRight') go(index + 1);
+    });
+
+    // 터치 스와이프
+    let startX = null;
+    const track = gal.querySelector('.gallery-track');
+    track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', e => {
+      if (startX === null) return;
+      const dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 40) go(dx < 0 ? index + 1 : index - 1);
+      startX = null;
+    });
+
+    go(0);
+  });
+
   /* ───── REBOOT 섹션 바로가기 (해시 변경 없음) ───── */
   document.querySelectorAll('[data-jump]').forEach(btn => {
     btn.addEventListener('click', () => {

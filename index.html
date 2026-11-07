@@ -319,15 +319,15 @@
         </div>
       </div>
       <figure class="proj-cover">
-        <button class="frame frame--16x9" type="button">
-          <img src="assets/reboot/cover.png" alt="REBOOT 대시보드의 인플루언서/파트너 탭 화면">
+        <button class="frame frame--16x9 frame--dark" type="button">
+          <img src="assets/reboot/lineup.png" alt="REBOOT 제품 라인업: 젤리 Original, 음료 레몬 · 라임 · 체리, 젤리 Balance">
         </button>
       </figure>
     </header>
 
     <nav class="jump" aria-label="이 페이지 섹션 바로가기">
       <button type="button" data-jump="reboot-case1">브랜드 · 시즌 제품</button>
-      <button type="button" data-jump="reboot-character">캐릭터 Rebu</button>
+      <button type="button" data-jump="reboot-lineup">캐릭터 · 제품 라인업</button>
       <button type="button" data-jump="reboot-case2">파트너 탭</button>
       <button type="button" data-jump="reboot-result">결과</button>
     </nav>
@@ -376,32 +376,44 @@
       </div>
     </article>
 
-    <!-- 캐릭터 -->
-    <section class="character" id="reboot-character" aria-label="REBOOT 캐릭터 Rebu">
-      <figure class="character-main">
-        <button class="frame frame--1x1 frame--plain" type="button">
-          <img src="assets/reboot/character/main.png" alt="REBOOT 캐릭터 Rebu 기본 디자인" loading="lazy">
-        </button>
-        <figcaption class="cap">기본 디자인</figcaption>
-      </figure>
-      <div class="character-info">
-        <p class="eyebrow">BRAND CHARACTER</p>
-        <h2 class="sec-title">Rebu · 리부</h2>
-        <dl class="spec">
-          <dt>제작 의도</dt><dd>숙취해소제를 ‘약’보다 친근한 브랜드로 소개하기 위한 캐릭터</dd>
-          <dt>활용</dt><dd>할로윈 시즌 프로모션</dd>
-        </dl>
-        <p class="mono-label poses-label">표정 · 포즈</p>
-        <div class="poses">
-          <button class="frame frame--1x1 frame--plain" type="button"><img src="assets/reboot/character/pose-01.png" alt="Rebu 표정 · 포즈 1" loading="lazy"></button>
-          <button class="frame frame--1x1 frame--plain" type="button"><img src="assets/reboot/character/pose-02.png" alt="Rebu 표정 · 포즈 2" loading="lazy"></button>
-          <button class="frame frame--1x1 frame--plain" type="button"><img src="assets/reboot/character/pose-03.png" alt="Rebu 표정 · 포즈 3" loading="lazy"></button>
+    <!-- 캐릭터 · 제품 라인업 -->
+    <section class="lineup" id="reboot-lineup" aria-label="REBOOT 캐릭터와 제품 라인업">
+      <p class="eyebrow">BRAND CHARACTER · PRODUCT LINE</p>
+      <h2 class="sec-title">캐릭터 Rebu와 제품 라인업</h2>
+
+      <div class="gallery" data-gallery>
+        <div class="gallery-stage">
+          <ul class="gallery-track">
+            <li class="gallery-slide" style="--stage:#000" data-title="Rebu" data-desc="말랑한 젤리의 형상을 바탕으로 만든 REBOOT의 마스코트 캐릭터입니다. 카우보이 모자와 부츠로 브랜드의 서부 모티브를 담았습니다.">
+              <button class="frame" type="button"><img src="assets/reboot/lineup/rebu.png" alt="REBOOT 캐릭터 Rebu" loading="lazy"></button>
+            </li>
+            <li class="gallery-slide" style="--stage:#E7E4E4" data-title="Jelly Original" data-desc="라임 · 레몬 · 체리 3가지 맛 젤리입니다. 카우보이 부츠 · 올가미 · 모자 모양으로 낱개 포장했습니다." hidden>
+              <button class="frame" type="button"><img src="assets/reboot/lineup/jelly-original.png" alt="REBOOT 젤리 Original 패키지" loading="lazy"></button>
+            </li>
+            <li class="gallery-slide" style="--stage:#000" data-title="Jelly Balance" data-desc="설탕을 뺀 Zero Sugar 버전의 젤리입니다. 맛 구성은 Original과 같습니다." hidden>
+              <button class="frame" type="button"><img src="assets/reboot/lineup/jelly-balance.png" alt="REBOOT 젤리 Balance(Zero Sugar) 패키지" loading="lazy"></button>
+            </li>
+            <li class="gallery-slide" style="--stage:#000" data-title="Drink Original · Lime" data-desc="100 mL(3.4 fl oz) 비탄산 음료, 유리병. 과당과 설탕으로 단맛을 냈습니다." hidden>
+              <button class="frame" type="button"><img src="assets/reboot/lineup/drink-original-lime.png" alt="REBOOT 음료 Original 라임" loading="lazy"></button>
+            </li>
+            <li class="gallery-slide" style="--stage:#E6E4E5" data-title="Drink Original · Cherry" data-desc="Original 음료의 체리 맛입니다. 라임과 같은 술병 모양 유리병에 담았습니다." hidden>
+              <button class="frame" type="button"><img src="assets/reboot/lineup/drink-original-cherry.jpg" alt="REBOOT 음료 Original 체리" loading="lazy"></button>
+            </li>
+            <li class="gallery-slide" style="--stage:#EAE9E7" data-title="Drink Balance · Lemon" data-desc="설탕을 뺀 Zero Sugar 버전의 음료입니다. Original과 같은 술병 모양 유리병에 담았습니다." hidden>
+              <button class="frame" type="button"><img src="assets/reboot/lineup/drink-balance-lemon.jpg" alt="REBOOT 음료 Balance 레몬(Zero Sugar)" loading="lazy"></button>
+            </li>
+          </ul>
+          <button class="gallery-nav gallery-nav--prev" type="button" aria-label="이전 이미지">‹</button>
+          <button class="gallery-nav gallery-nav--next" type="button" aria-label="다음 이미지">›</button>
         </div>
-        <p class="mono-label poses-label">할로윈 프로모션 활용</p>
-        <figure>
-          <button class="frame frame--16x9" type="button"><img src="assets/reboot/character/halloween.png" alt="할로윈 프로모션에 쓰인 Rebu" loading="lazy"></button>
-        </figure>
-        <p class="char-note">캐릭터에 대한 소비자 반응은 측정하지 않았습니다.</p>
+        <div class="gallery-info">
+          <div class="gallery-meta">
+            <span class="gallery-count" aria-live="polite">1 / 6</span>
+            <div class="gallery-dots" role="tablist" aria-label="이미지 선택"></div>
+          </div>
+          <h3 class="gallery-title">Rebu</h3>
+          <p class="gallery-desc"></p>
+        </div>
       </div>
     </section>
 
