@@ -451,6 +451,8 @@ a.course-item:hover .go{ transform:translate(4px,-50%); }
 }
 .ig-phone .frame:hover{ border-color:var(--muted); }
 .ig-phone img{ border-radius:28px; height:auto; }
+.ig-scope{ margin-bottom:12px; font-size:13px; color:var(--muted); }
+.ig-scope b{ color:var(--ink); }
 .ig-stats{
   display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:12px;
   padding:0; list-style:none;
