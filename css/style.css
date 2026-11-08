@@ -122,13 +122,13 @@ button{ font:inherit; color:inherit; }
 .role-name{ font-family:var(--mono); font-size:12px; font-weight:600; letter-spacing:.04em; color:var(--blue); }
 .role-desc{ margin-top:4px; font-weight:700; line-height:1.55; }
 .role-links{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
-.role-links a{
+.role-links a, .role-chip{
   display:inline-flex; align-items:baseline; gap:6px;
   min-height:40px; padding:8px 14px;
   border:1px solid var(--line); border-radius:999px;
   font-size:14px; font-weight:700; text-decoration:none;
 }
-.role-links a span{ font-size:12px; font-weight:500; color:var(--muted); }
+.role-links a span, .role-chip span{ font-size:12px; font-weight:500; color:var(--muted); }
 .role-links a::after{ content:"→"; color:var(--blue); }
 .role-links a:hover{ border-color:var(--blue); }
 .roles-note{ margin-top:16px; padding-top:12px; border-top:1px solid var(--soft); font-size:13px; color:var(--muted); }
@@ -158,7 +158,7 @@ button{ font:inherit; color:inherit; }
 }
 .strength-proof li{ font-size:14px; line-height:1.6; }
 .strength-proof li + li{ margin-top:8px; }
-.strength-proof a{
+.strength-proof a, .proof-tag{
   display:inline-block; margin-right:8px;
   font-family:var(--mono); font-size:12px; font-weight:600;
   color:var(--blue); text-decoration:none;
@@ -235,6 +235,11 @@ button{ font:inherit; color:inherit; }
 a.course-item:hover{ background:var(--ground); }
 .course-item-title{ display:flex; align-items:center; gap:8px; font-size:18px; font-weight:900; }
 .course-item-desc{ color:var(--muted); font-size:14px; }
+/* 경험 설명 점 목록 */
+.dot-list{ display:block; margin-top:8px; padding:0; list-style:none; }
+.dot-list > *{ display:block; position:relative; padding-left:12px; font-size:14px; line-height:1.6; color:var(--muted); }
+.dot-list > * + *{ margin-top:4px; }
+.dot-list > *::before{ content:""; position:absolute; left:0; top:.7em; width:4px; height:4px; border-radius:50%; background:var(--muted); }
 .go{
   position:absolute; right:12px; top:50%; transform:translateY(-50%);
   color:var(--blue); font-weight:700; font-size:18px;
