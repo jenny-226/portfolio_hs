@@ -312,6 +312,7 @@ a.course-item:hover .go{ transform:translate(4px,-50%); }
 .frame--16x9{ aspect-ratio:16/9; }
 .frame--4x3{ aspect-ratio:4/3; }
 .frame--4x5{ aspect-ratio:4/5; }
+.frame--2x3{ aspect-ratio:2/3; }
 .frame--1x1{ aspect-ratio:1/1; }
 .frame--plain{ background:transparent; }
 .frame--dark{ background:#000; }
@@ -424,22 +425,42 @@ a.course-item:hover .go{ transform:translate(4px,-50%); }
 .shot-name b{ color:var(--ink); }
 .duo, .concepts{ display:grid; grid-template-columns:1fr 1fr; gap:var(--gap); }
 
-/* REBOOT 피드 */
-.feed-head{
-  display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px;
-  margin:32px 0 12px;
-}
 .text-link{ font-size:13px; font-weight:700; color:var(--blue); text-decoration:none; }
 .text-link:hover{ text-decoration:underline; }
-.feed{ display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; }
-.post{ position:relative; }
-.post-badge{
-  position:absolute; top:8px; left:8px; z-index:1;
-  padding:2px 8px; border-radius:4px;
-  background:var(--ink); color:#fff;
-  font-size:11px; font-weight:700;
-  pointer-events:none;
+
+/* REBOOT Instagram 운영: 휴대폰 화면 + 수치 카드 + 인사이트 */
+.ig{
+  padding:48px 0;
+  border-top:1px solid var(--line);
+  scroll-margin-top:var(--header-h);
 }
+.ig-lead{ margin-top:8px; max-width:56ch; color:var(--muted); }
+.ig-btn{ gap:10px; margin-top:20px; border-radius:999px; }
+.ig-handle{ font-family:var(--mono); font-size:12px; font-weight:500; opacity:.75; }
+.ig-body{
+  display:grid; grid-template-columns:minmax(0,300px) minmax(0,1fr); gap:32px; align-items:start;
+  margin-top:32px;
+}
+.ig-phone .frame{
+  padding:8px;
+  border:1px solid #2A2D35; border-radius:36px;
+  background:var(--ink);
+}
+.ig-phone .frame:hover{ border-color:var(--muted); }
+.ig-phone img{ border-radius:28px; height:auto; }
+.ig-stats{
+  display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:12px;
+  padding:0; list-style:none;
+}
+.ig-stats li{
+  padding:18px 18px 16px;
+  border:1px solid var(--line); border-radius:var(--radius);
+  background:var(--card);
+}
+.ig-stats b{ display:block; font-size:26px; font-weight:900; line-height:1.2; color:var(--blue); }
+.ig-stats span{ display:block; margin-top:6px; font-size:13px; color:var(--muted); }
+.ig-insight{ max-width:440px; margin:24px auto 0; }
+.ig-insight .frame img{ height:auto; }
 
 /* REBOOT 바로가기 */
 .jump{
@@ -608,8 +629,11 @@ a.course-item:hover .go{ transform:translate(4px,-50%); }
 
   .pair{ grid-template-columns:1fr; }
   .pair-arrow::before{ content:"↓"; }
-  .duo, .concepts{ grid-template-columns:1fr; }
-  .feed{ grid-template-columns:repeat(2, 1fr); }
+  .duo{ grid-template-columns:1fr; }
+  .concepts{ gap:8px; }
+  .ig-body{ grid-template-columns:1fr; gap:24px; }
+  .ig-phone{ max-width:280px; margin:0 auto; width:100%; }
+  .ig-stats{ grid-template-columns:repeat(2, minmax(0,1fr)); }
 
   .gallery-nav{ width:40px; height:40px; font-size:24px; }
   .gallery-nav--prev{ left:8px; }
