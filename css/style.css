@@ -115,23 +115,6 @@ button{ font:inherit; color:inherit; }
 .hero-role .mono-label{ margin-right:8px; }
 
 /* 지원 직무와 연결되는 경험 */
-.roles{ margin-top:32px; padding:24px; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); }
-.roles-title{ font-size:16px; font-weight:900; }
-.roles-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px 32px; margin-top:16px; }
-.role + .role{ padding-left:32px; border-left:1px solid var(--soft); }
-.role-name{ font-family:var(--mono); font-size:12px; font-weight:600; letter-spacing:.04em; color:var(--blue); }
-.role-desc{ margin-top:4px; font-weight:700; line-height:1.55; }
-.role-links{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
-.role-links a, .role-chip{
-  display:inline-flex; align-items:baseline; gap:6px;
-  min-height:40px; padding:8px 14px;
-  border:1px solid var(--line); border-radius:999px;
-  font-size:14px; font-weight:700; text-decoration:none;
-}
-.role-links a span, .role-chip span{ font-size:12px; font-weight:500; color:var(--muted); }
-.role-links a::after{ content:"→"; color:var(--blue); }
-.role-links a:hover{ border-color:var(--blue); }
-.roles-note{ margin-top:16px; padding-top:12px; border-top:1px solid var(--soft); font-size:13px; color:var(--muted); }
 
 /* 강점 카드: 강점명 · 강점 · 설명 · 근거 경험 줄을 카드끼리 맞춘다 */
 .strengths{
@@ -609,9 +592,6 @@ a.course-item:hover .go{ transform:translate(4px,-50%); }
 
   .strengths{ grid-template-columns:1fr; margin-top:32px; gap:32px; }
   .strengths > li{ grid-row:auto; grid-template-rows:none; }
-  .roles{ padding:20px; }
-  .roles-grid{ grid-template-columns:1fr; }
-  .role + .role{ padding-left:0; border-left:0; padding-top:16px; border-top:1px solid var(--soft); }
 
   .roles-split{ grid-template-columns:1fr; margin-bottom:32px; }
   .roles-split > div{ padding:16px 20px; }
