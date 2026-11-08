@@ -449,6 +449,7 @@ a.course-item:hover .go{ transform:translate(4px,-50%); }
 .ig-stats span{ display:block; margin-top:6px; font-size:13px; color:var(--muted); }
 .ig-insight{ max-width:440px; margin:24px auto 0; }
 .ig-insight .frame img{ height:auto; }
+.ig-posts{ max-width:760px; margin-top:40px; }
 
 /* REBOOT 바로가기 */
 .jump{
@@ -465,11 +466,6 @@ a.course-item:hover .go{ transform:translate(4px,-50%); }
 .jump button:hover{ border-color:var(--ink); }
 
 /* REBOOT 캐릭터 · 제품 라인업 (슬라이드) */
-.lineup{
-  padding:48px 0;
-  border-top:1px solid var(--line);
-  scroll-margin-top:var(--header-h);
-}
 .sec-title{ font-size:22px; font-weight:900; }
 .gallery{
   max-width:760px;
