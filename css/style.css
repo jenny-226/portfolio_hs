@@ -129,7 +129,7 @@ button{ font:inherit; color:inherit; }
   margin-top:40px;
 }
 .strengths > li{
-  display:grid; grid-row:span 4; grid-template-rows:subgrid; row-gap:10px;
+  display:grid; grid-row:span 3; grid-template-rows:subgrid; row-gap:10px;
   align-content:start;
   padding-top:16px; border-top:2px solid var(--ink);
 }
@@ -137,19 +137,6 @@ button{ font:inherit; color:inherit; }
 .strength-no{ font-family:var(--mono); font-size:12px; font-weight:600; color:var(--blue); }
 .strength-title{ font-size:19px; font-weight:900; line-height:1.45; }
 .strength-desc{ font-size:14px; line-height:1.7; color:var(--muted); }
-.strength-proof{
-  margin-top:4px; padding-top:12px;
-  border-top:1px solid var(--soft);
-}
-.strength-proof li{ font-size:14px; line-height:1.6; }
-.strength-proof li + li{ margin-top:8px; }
-.strength-proof a, .proof-tag{
-  display:inline-block; margin-right:8px;
-  font-family:var(--mono); font-size:12px; font-weight:600;
-  color:var(--blue); text-decoration:none;
-}
-.strength-proof a::after{ content:" →"; }
-.strength-proof a:hover{ text-decoration:underline; }
 .hero-meta{
   display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px 24px;
   margin-top:32px; padding-top:16px;
