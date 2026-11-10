@@ -111,8 +111,14 @@ button{ font:inherit; color:inherit; }
   letter-spacing:-.02em;
 }
 .hero-lead{ margin-top:16px; max-width:62ch; font-size:17px; line-height:1.7; color:var(--muted); }
-.hero-role{ margin-top:16px; font-size:16px; font-weight:700; }
-.hero-role .mono-label{ margin-right:8px; }
+.hero-highlight{
+  display:inline-flex; flex-wrap:wrap; align-items:center; gap:4px 10px;
+  margin-top:20px; padding:8px 16px;
+  border:1px solid var(--line); border-radius:999px;
+  font-size:15px; font-weight:700;
+}
+.hero-highlight b{ color:var(--orange); }
+.hero-highlight span{ font-family:var(--mono); font-size:12px; font-weight:600; color:var(--muted); }
 
 /* 지원 직무와 연결되는 경험 */
 
@@ -161,8 +167,8 @@ button{ font:inherit; color:inherit; }
   gap:40px var(--gap);
   align-items:start;
 }
+.intro-main{ grid-column:span 7; display:grid; gap:24px; }
 .intro-left{ grid-column:span 5; display:grid; gap:40px; }
-.course{ grid-column:span 7; }
 .intro-grid--bottom{ margin-top:48px; padding-top:40px; border-top:1px solid var(--line); }
 .intro-grid--bottom .history{ grid-column:span 7; }
 .intro-grid--bottom .block:last-child{ grid-column:span 5; }
@@ -203,6 +209,7 @@ button{ font:inherit; color:inherit; }
 .course-sub{ color:var(--muted); margin-top:4px; }
 .course-list{ margin-top:20px; border-top:1px solid var(--soft); }
 .course-list li + li{ border-top:1px solid var(--soft); }
+.course-list--solo{ margin-top:8px; border-top:0; }
 .course-item{
   position:relative;
   display:grid; gap:2px;
@@ -612,7 +619,7 @@ a.course-item:hover .go{ transform:translate(4px,-50%); }
 
   .verify li{ grid-template-columns:1fr; gap:2px; }
   .intro-grid{ grid-template-columns:1fr; gap:40px; }
-  .intro-left, .course,
+  .intro-left, .intro-main,
   .intro-grid--bottom .history,
   .intro-grid--bottom .block:last-child{ grid-column:auto; }
   .course{ padding:20px; }
