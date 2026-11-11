@@ -154,7 +154,7 @@ button{ font:inherit; color:inherit; }
   gap:40px var(--gap);
   align-items:start;
 }
-.intro-main{ grid-column:span 7; display:grid; gap:24px; }
+.intro-main{ grid-column:span 7; display:grid; gap:16px; }
 .intro-left{ grid-column:span 5; display:grid; gap:40px; }
 .intro-grid--bottom{ margin-top:48px; padding-top:40px; border-top:1px solid var(--line); }
 .intro-grid--bottom .history{ grid-column:span 7; }
@@ -189,18 +189,19 @@ button{ font:inherit; color:inherit; }
   border:1px solid var(--line);
   border-radius:var(--radius);
 }
-.course{ padding:28px; }
-.course-head{ display:flex; justify-content:space-between; margin-bottom:10px; }
+.course{ padding:22px 28px; }
+.course-head{ display:flex; justify-content:space-between; margin-bottom:6px; }
 .course-head .mono-label:first-child{ color:var(--blue); }
 .course-title{ font-size:22px; font-weight:900; line-height:1.4; }
 .course-sub{ color:var(--muted); margin-top:4px; }
-.course-list{ margin-top:20px; border-top:1px solid var(--soft); }
+.course-list{ margin-top:14px; border-top:1px solid var(--soft); }
 .course-list li + li{ border-top:1px solid var(--soft); }
-.course-list--solo{ margin-top:8px; border-top:0; }
+.course-list--solo{ margin-top:0; border-top:0; }
+.course-list--solo .course-item{ padding-top:6px; padding-bottom:6px; }
 .course-item{
   position:relative;
   display:grid; gap:2px;
-  padding:18px 40px 18px 12px;
+  padding:14px 40px 14px 12px;
   margin:0 -12px;
   border-radius:8px;
   text-decoration:none;
@@ -540,13 +541,14 @@ a.course-item:hover .go{ transform:translate(4px,-50%); }
 .gain{ margin-top:24px; }
 .gain-row{
   display:grid;
-  grid-template-columns:minmax(0,2.4fr) minmax(0,3.6fr) minmax(0,5fr);
+  grid-template-columns:minmax(0,1.7fr) minmax(0,5.6fr) minmax(0,4.2fr);
   gap:8px 28px; align-items:start;
   padding:22px 0;
   border-top:1px solid rgba(255,255,255,.16);
 }
 .gain-key{ font-size:15px; font-weight:700; line-height:1.5; color:var(--dark-sub); }
-.gain-num{ display:flex; flex-wrap:wrap; align-items:baseline; gap:2px 10px; font-size:20px; line-height:1.35; }
+/* 넓은 화면: 이전 → 이후를 한 줄에 나란히 */
+.gain-num{ display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); align-items:center; gap:4px 14px; font-size:18px; line-height:1.4; }
 .gain-from{ font-weight:700; color:var(--dark-sub); }
 .gain-arrow{ font-weight:700; color:var(--dark-acc); }
 .gain-to{ font-weight:900; color:#fff; }
@@ -634,7 +636,7 @@ a.course-item:hover .go{ transform:translate(4px,-50%); }
   .result{ padding:24px; }
   .result-head{ font-size:19px; }
   .gain-row{ grid-template-columns:1fr; gap:6px; padding:18px 0; }
-  .gain-num{ font-size:18px; }
+  .gain-num{ display:flex; flex-wrap:wrap; align-items:baseline; gap:2px 10px; font-size:18px; }
 
   .contrib{ grid-template-columns:1fr; gap:6px; }
 }
