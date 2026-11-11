@@ -359,8 +359,7 @@ a.course-item:hover .go{ transform:translate(4px,-50%); }
   display:grid; grid-template-columns:minmax(0,1fr) minmax(0,380px);
   gap:32px; align-items:start;
 }
-.case-split .story{ max-width:none; }
-.case-split .evidence{ margin-top:12px; }
+.case-split .story{ max-width:none; }.case-split .evidence{ margin-top:12px; }
 .case-split .gallery{ max-width:none; margin-top:0; }
 .case-split .gallery-slide .frame{ aspect-ratio:1/1; }
 .case-split .gallery-slide .frame img{ object-fit:cover; }
