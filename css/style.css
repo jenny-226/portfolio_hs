@@ -507,33 +507,6 @@ a.course-item:hover .go{ transform:translate(4px,-50%); }
 .gallery-desc{ margin-top:4px; color:var(--muted); }
 
 /* ═════════ 결과 · 직무 기여 ═════════ */
-.result{
-  margin-top:16px;
-  padding:32px;
-  border-radius:var(--radius);
-  background:var(--dark); color:#fff;
-  scroll-margin-top:var(--header-h);
-}
-.result-label{ font-family:var(--mono); font-size:12px; font-weight:600; letter-spacing:.06em; color:var(--dark-acc); }
-.result-head{ margin-top:12px; font-size:22px; font-weight:900; line-height:1.45; max-width:40ch; }
-
-/* 업무 변화: 무엇을 → 얼마나 줄였는지 */
-.gain{ margin-top:24px; }
-.gain-row{
-  display:grid;
-  grid-template-columns:minmax(0,1.7fr) minmax(0,5.6fr) minmax(0,4.2fr);
-  gap:8px 28px; align-items:start;
-  padding:22px 0;
-  border-top:1px solid rgba(255,255,255,.16);
-}
-.gain-key{ font-size:15px; font-weight:700; line-height:1.5; color:var(--dark-sub); }
-/* 넓은 화면: 이전 → 이후를 한 줄에 나란히 */
-.gain-num{ display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); align-items:center; gap:4px 14px; font-size:18px; line-height:1.4; }
-.gain-from{ font-weight:700; color:var(--dark-sub); }
-.gain-arrow{ font-weight:700; color:var(--dark-acc); }
-.gain-to{ font-weight:900; color:#fff; }
-.gain-desc{ font-size:14px; line-height:1.7; color:rgba(255,255,255,.82); }
-
 /* 결과 수치 박스: 단축 시간 · % 만 보여줌 */
 .metrics{ margin-top:16px; scroll-margin-top:var(--header-h); }
 .metrics-label{ font-family:var(--mono); font-size:12px; font-weight:600; letter-spacing:.06em; color:var(--blue); }
@@ -552,6 +525,14 @@ a.course-item:hover .go{ transform:translate(4px,-50%); }
 .metric-to{ font-size:30px; font-weight:900; color:var(--ink); }
 .metric-rate{ padding-top:14px; border-top:1px solid var(--soft); font-size:16px; font-weight:700; color:var(--muted); }
 .metric-rate b{ margin-right:6px; font-family:var(--mono); font-size:44px; font-weight:600; line-height:1; color:var(--blue); }
+/* 수치 대신 해결한 페인포인트를 보여주는 박스 */
+.metric--text .metric-time{ font-size:17px; line-height:1.5; }
+.metric--text .metric-to{ font-size:22px; line-height:1.4; }
+/* 단축률을 먼저 크게, 시간은 그 아래 작게 */
+.metric--rate-first .metric-rate{ padding:0 0 14px; border-top:0; border-bottom:1px solid var(--soft); }
+.metric--rate-first .metric-rate b{ font-size:56px; }
+.metric--rate-first .metric-time{ font-size:18px; }
+.metric--rate-first .metric-to{ font-size:22px; }
 
 .contrib{
   display:grid; grid-template-columns:auto 1fr; gap:20px; align-items:baseline;
@@ -630,15 +611,12 @@ a.course-item:hover .go{ transform:translate(4px,-50%); }
   .gallery-nav--next{ right:8px; }
   .gallery-info{ padding:16px; }
 
-  .result{ padding:24px; }
-  .result-head{ font-size:19px; }
-  .gain-row{ grid-template-columns:1fr; gap:6px; padding:18px 0; }
-  .gain-num{ display:flex; flex-wrap:wrap; align-items:baseline; gap:2px 10px; font-size:18px; }
   .metrics-grid{ grid-template-columns:1fr; gap:12px; }
   .metric{ padding:22px 20px; }
   .metric-time{ font-size:19px; }
   .metric-to{ font-size:26px; }
   .metric-rate b{ font-size:36px; }
+  .metric--rate-first .metric-rate b{ font-size:44px; }
 
   .contrib{ grid-template-columns:1fr; gap:6px; }
 }
