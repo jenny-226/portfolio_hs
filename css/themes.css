@@ -1,0 +1,222 @@
+/* ═══════════════════════════════════════════════════════════
+   탭별 테마 — 각 대시보드 실제 코드의 글꼴 · 색 · 강조 방식
+   소개 탭은 style.css 기본(3색 · Noto Sans KR) 그대로.
+   각 탭은 3색만: 배경 · 글자 · 강조 1개. 회색 · 옅은 강조색은 그 농도 단계.
+   ═══════════════════════════════════════════════════════════ */
+
+/* COSMOA 대시보드와 같은 NanumSquare Neo 400 / 700 / 800 (네이버 한글 웹폰트) */
+@font-face{ font-family:"NanumSquare Neo"; font-weight:400; font-display:swap;
+  src:url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff) format("woff"); }
+@font-face{ font-family:"NanumSquare Neo"; font-weight:700; font-display:swap;
+  src:url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.woff) format("woff"); }
+@font-face{ font-family:"NanumSquare Neo"; font-weight:800 900; font-display:swap;
+  src:url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.woff) format("woff"); }
+
+
+/* ─────────────────────────────────────────────
+   COSMOA  (assets/common/style.css 기준)
+   글꼴 NanumSquare Neo · 굵기 400 / 700 / 800만
+   강조 = 굵기 800 + 프라이머리 블루, 활성 = 옅은 블루 바탕 + 블루 글자
+   카드 = 테두리 · 그림자 없이 둥근 24px
+   ───────────────────────────────────────────── */
+body:has(#tab-cosmoa:not([hidden])){
+  --ground:#F2F4F6;        /* color-background */
+  --card:#FFFFFF;          /* color-surface */
+  --ink:#191F28;           /* color-text-primary */
+  --accent:#1B64DA;        /* color-primary */
+  --muted:#6B7684;         /* color-text-secondary */
+  --line:#E5E8EB;          /* color-border-strong */
+  --soft:#F2F4F6;
+  --gray-tint:#F9FAFB;     /* color-surface-muted */
+  --accent-soft:#E8F3FF;   /* color-primary-soft (블루 농도 단계) */
+  --radius:24px;
+  --font:"NanumSquare Neo","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --mono:var(--font);      /* 코스모아는 고정폭 글꼴을 쓰지 않음 */
+}
+body:has(#tab-cosmoa:not([hidden])) .site-header{ background:rgba(242,244,246,.92); border-bottom-color:transparent; }
+body:has(#tab-cosmoa:not([hidden])) .brand{ font-weight:800; }
+body:has(#tab-cosmoa:not([hidden])) .tab{ min-height:40px; margin-bottom:8px; border-radius:12px; border-bottom:0; font-weight:400; }
+body:has(#tab-cosmoa:not([hidden])) .tab[aria-current="page"]{ color:var(--accent); background:var(--accent-soft); font-weight:700; }
+
+#tab-cosmoa .eyebrow,
+#tab-cosmoa .mono-label{ letter-spacing:0; font-weight:700; }
+#tab-cosmoa .eyebrow{ color:var(--accent); }
+#tab-cosmoa .proj-title{ font-weight:800; letter-spacing:-.03em; }
+#tab-cosmoa .proj-summary{ font-weight:400; color:var(--ink); }
+#tab-cosmoa .chip{ border:0; background:var(--card); color:#4E5968; font-weight:700; font-size:14px; }
+#tab-cosmoa .badge-award{ border-radius:999px; padding:3px 12px; font-weight:800; }
+#tab-cosmoa .btn{ min-height:52px; padding:0 24px; border-radius:14px; background:var(--accent); border-color:var(--accent); color:var(--card); font-size:15px; }
+#tab-cosmoa .btn:hover{ background:#1957C2; border-color:#1957C2; box-shadow:0 6px 16px rgba(27,100,218,.24); }
+#tab-cosmoa .frame{ border:0; box-shadow:0 1px 2px rgba(25,31,40,.04); }
+
+#tab-cosmoa .case{
+  margin-top:16px; padding:32px;
+  background:var(--card); border:0; border-radius:var(--radius);
+  box-shadow:0 1px 2px rgba(25,31,40,.04);
+}
+#tab-cosmoa .case-no{ letter-spacing:0; font-weight:800; color:var(--muted); }
+#tab-cosmoa .case-title{ font-size:19px; font-weight:800; }
+#tab-cosmoa .story{ color:#4E5968; }
+#tab-cosmoa .method{ border-radius:999px; padding:5px 12px; }
+#tab-cosmoa .method--ai{ background:var(--accent-soft); color:var(--accent); }
+#tab-cosmoa .method--data{ background:var(--soft); color:#4E5968; }
+#tab-cosmoa .case .frame{ border:1px solid var(--line); border-radius:16px; }
+/* 강조: 굵게(800) + 진한 글자 / AI 부분은 btn-soft처럼 옅은 블루 칩 */
+#tab-cosmoa .story strong{ box-shadow:none; font-weight:800; color:var(--ink); }
+#tab-cosmoa .story mark.ai{ background:var(--accent-soft); color:var(--accent); padding:1px 6px; border-radius:6px; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+#tab-cosmoa .story mark.key{ background:var(--soft); color:var(--ink); font-weight:800; }
+
+#tab-cosmoa .metrics{ margin-top:32px; }
+#tab-cosmoa .metrics-label{ letter-spacing:0; font-weight:800; font-size:14px; }
+#tab-cosmoa .metric{ border:0; border-radius:var(--radius); box-shadow:0 1px 2px rgba(25,31,40,.04); }
+#tab-cosmoa .metric-no{ font-weight:800; }
+#tab-cosmoa .metric-rate b{ font-weight:800; letter-spacing:-1px; }
+#tab-cosmoa .metric-to{ font-weight:800; }
+#tab-cosmoa .contrib{ margin-top:16px; padding:24px 32px; background:var(--card); border:0; border-radius:var(--radius); }
+#tab-cosmoa .contrib-label{ letter-spacing:0; font-weight:800; }
+
+
+/* ─────────────────────────────────────────────
+   REBOOT  (reboot-portfolio(2차 전체 수정).html 기준)
+   글꼴 본문 IBM Plex Sans KR · 숫자/제목 Archivo Black · 라벨 IBM Plex Mono 대문자
+   강조 = 라임 글자, 큰 수치는 Archivo Black 라임
+   ───────────────────────────────────────────── */
+body:has(#tab-reboot:not([hidden])){
+  --ground:#1E211B;        /* 브랜드 검정 */
+  --card:#292C24;          /* ink-2 */
+  --ink:#F1F2EC;
+  --accent:#B1FF3B;        /* 브랜드 라임 네온 */
+  --muted:#A3A796;
+  --line:#3D4135;
+  --soft:#3A3E33;
+  --gray-tint:#292C24;
+  --radius:14px;
+  --font:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  --display:"Archivo Black","IBM Plex Sans KR",Impact,sans-serif;
+}
+body:has(#tab-reboot:not([hidden])) .site-header{ background:rgba(30,33,27,.9); }
+body:has(#tab-reboot:not([hidden])) .tab:hover,
+body:has(#tab-reboot:not([hidden])) .tab[aria-current="page"]{ color:var(--accent); }
+
+#tab-reboot{ font-size:16.5px; }
+#tab-reboot .eyebrow,
+#tab-reboot .mono-label,
+#tab-reboot .case-no,
+#tab-reboot .metrics-label,
+#tab-reboot .contrib-label,
+#tab-reboot .metric-no{ font-weight:500; text-transform:uppercase; letter-spacing:.08em; color:var(--accent); }
+#tab-reboot .proj-title{
+  font-family:var(--display); font-weight:400; text-transform:uppercase;
+  font-size:clamp(56px, 9vw, 112px); line-height:.95; letter-spacing:-.01em;
+  color:var(--accent);
+}
+#tab-reboot .proj-summary{ color:#C9CCBE; font-weight:400; }
+#tab-reboot .chip{ background:var(--card); border-color:var(--line); color:#D4D7C9; }
+#tab-reboot .badge-award{ border-radius:4px; background:transparent; border:1px solid var(--accent); color:var(--accent); font-weight:500; }
+#tab-reboot .btn{ border-radius:999px; background:var(--accent); border-color:var(--accent); color:var(--ground); }
+#tab-reboot .btn:hover{ background:var(--ink); border-color:var(--ink); }
+#tab-reboot .btn--ghost{ background:transparent; color:var(--ink); border-color:var(--line); }
+#tab-reboot .btn--ghost:hover{ color:var(--accent); border-color:var(--accent); }
+#tab-reboot .frame{ border-color:var(--line); background:var(--card); }
+#tab-reboot .frame--dark{ background:var(--ground); }
+
+#tab-reboot .jump button{ border-color:var(--line); background:var(--card); color:var(--ink); }
+#tab-reboot .jump button:hover{ border-color:var(--accent); color:var(--accent); }
+
+#tab-reboot .case-title{ font-weight:700; }
+#tab-reboot .story{ color:#C9CCBE; }
+#tab-reboot .method{ border-radius:4px; font-family:var(--mono); font-weight:500; font-size:12px; letter-spacing:.06em; }
+#tab-reboot .method--ai{ background:var(--accent); color:var(--ground); }
+/* 강조: 라임 글자 (원본 em · b 방식) / 굵은 문장은 흰 글자 */
+#tab-reboot .story strong{ box-shadow:none; color:#fff; font-weight:700; }
+#tab-reboot .story mark.ai{ background:none; color:var(--accent); font-weight:700; }
+#tab-reboot .story mark.key{ background:none; color:var(--accent); font-weight:500; }
+#tab-reboot .ig-lead strong{ box-shadow:none; color:var(--accent); font-weight:500; }
+
+#tab-reboot .gallery{ border-color:var(--line); }
+#tab-reboot .gallery-info{ border-color:var(--line); }
+#tab-reboot .gallery-title{ font-weight:700; }
+#tab-reboot .gallery-nav{ background:rgba(30,33,27,.85); border-color:var(--line); color:var(--ink); }
+#tab-reboot .gallery-nav:hover{ border-color:var(--accent); color:var(--accent); }
+
+#tab-reboot .metric{ border-color:var(--line); }
+#tab-reboot .metric-rate b,
+#tab-reboot .metric-to{ font-family:var(--display); font-weight:400; color:var(--accent); }
+#tab-reboot .contrib{ border-color:var(--line); }
+
+
+/* ─────────────────────────────────────────────
+   건강기능식품 대시보드  (healthcare_sales/css/base.css 기준)
+   글꼴 Pretendard · 굵기 500 / 700 / 800
+   강조 = 프라이머리 블루 굵게, 번호 = 옅은 블루 6px 태그, 활성 메뉴 = 블루 꽉 찬 바탕
+   상단 = 사이드바 네이비, 카드 = 1px 선 · 12px
+   ───────────────────────────────────────────── */
+body:has(#tab-health:not([hidden])){
+  --ground:#F5F6F8;        /* --bg */
+  --card:#FFFFFF;
+  --ink:#1D2939;           /* --text (사이드바 #101828은 이 색의 진한 단계) */
+  --accent:#2F6FEB;        /* --primary */
+  --muted:#667085;
+  --line:#E4E7EC;
+  --soft:#F2F4F7;
+  --gray-tint:#F2F4F7;
+  --accent-soft:#EAF1FE;   /* --primary-soft */
+  --radius:12px;
+  --font:"Pretendard","Pretendard Variable",-apple-system,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",sans-serif;
+  --mono:var(--font);
+}
+body:has(#tab-health:not([hidden])) .site-header{ background:#101828; border-bottom-color:#101828; }
+body:has(#tab-health:not([hidden])) .brand{ color:#fff; }
+body:has(#tab-health:not([hidden])) .brand span{ color:#98A2B3; }
+body:has(#tab-health:not([hidden])) .tab{ min-height:38px; margin-bottom:8px; border-radius:8px; border-bottom:0; color:#D0D5DD; }
+body:has(#tab-health:not([hidden])) .tab:hover{ background:var(--ink); color:#fff; }
+body:has(#tab-health:not([hidden])) .tab[aria-current="page"]{ background:var(--accent); color:#fff; }
+
+#tab-health{ font-variant-numeric:tabular-nums; }
+#tab-health .eyebrow,
+#tab-health .mono-label{ letter-spacing:0; font-weight:700; }
+#tab-health .eyebrow{ color:var(--accent); }
+#tab-health .proj-title{ font-weight:800; letter-spacing:-.02em; }
+#tab-health .proj-summary{ font-weight:500; }
+#tab-health .chip{ border-color:#D0D5DD; font-size:12px; padding:3px 12px; }
+#tab-health .badge-award{ border-radius:6px; font-weight:700; }
+#tab-health .btn{ background:var(--accent); border-color:var(--accent); color:#fff; font-weight:500; }
+#tab-health .btn:hover{ background:#2559C7; border-color:#2559C7; }
+
+#tab-health .case{
+  margin-top:16px; padding:24px 28px;
+  background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+}
+/* 개발요청서 탭의 번호 태그(req-no) 모양 */
+#tab-health .case-no{
+  padding:1px 8px; border-radius:6px;
+  background:var(--accent-soft); color:var(--accent);
+  font-size:12px; font-weight:700; letter-spacing:0;
+}
+#tab-health .case-title{ font-size:18px; font-weight:700; }
+#tab-health .method{ border-radius:6px; font-size:12px; font-weight:600; padding:1px 8px; line-height:1.6; }
+#tab-health .method--data{ background:var(--soft); color:#475467; }
+#tab-health .method--rule{ border-color:#D0D5DD; color:#475467; }
+/* 강조: 블루 굵게 (cost-sel · cost-ok 방식) / 핵심 구간은 회색 배지 */
+#tab-health .story strong{ box-shadow:none; color:var(--accent); font-weight:700; }
+#tab-health .story mark.key{ background:var(--soft); color:var(--ink); font-weight:700; border-radius:6px; }
+
+#tab-health .metrics{ margin-top:32px; }
+#tab-health .metrics-label{ letter-spacing:0; font-weight:700; }
+#tab-health .metric{ border-radius:var(--radius); padding:24px 28px; }
+#tab-health .metric-no{ padding:0 6px; border-radius:6px; background:var(--accent-soft); font-weight:700; }
+#tab-health .metric-rate b{ font-family:var(--font); font-weight:800; color:var(--accent); }
+#tab-health .metric-to{ font-weight:800; }
+#tab-health .contrib{
+  margin-top:16px; padding:18px 22px;
+  background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+}
+#tab-health .contrib-label{ letter-spacing:0; font-weight:700; }
+
+
+/* ───────── 모바일 ───────── */
+@media (max-width:860px){
+  #tab-cosmoa .case, #tab-health .case{ padding:22px 20px; }
+  #tab-cosmoa .contrib, #tab-health .contrib{ padding:20px; }
+}
