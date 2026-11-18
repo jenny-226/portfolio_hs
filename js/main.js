@@ -51,6 +51,21 @@
   const boxCap = box.querySelector('.lightbox-cap');
 
   document.addEventListener('click', e => {
+    // 영상 포스터: 누르면 이미지 자리에 영상 iframe을 넣는다 (라이트박스 대신)
+    const poster = e.target.closest('.video-poster');
+    if (poster) {
+      const wrap = document.createElement('div');
+      wrap.className = poster.className.replace('video-poster', '').trim();
+      const iframe = document.createElement('iframe');
+      iframe.src = poster.dataset.video;
+      iframe.title = poster.getAttribute('aria-label').replace(' 재생', '');
+      iframe.allow = 'autoplay; fullscreen';
+      iframe.allowFullscreen = true;
+      wrap.appendChild(iframe);
+      poster.replaceWith(wrap);
+      return;
+    }
+
     const frame = e.target.closest('.frame');
     if (!frame || frame.disabled) return;
     const img = frame.querySelector('img');

@@ -213,10 +213,6 @@
           <li class="chip">화장품 ODM 해외영업 대시보드</li>
           <li class="chip">담당: 개발요청서 탭 기획 · 구현</li>
         </ul>
-        <div class="actions">
-          <a class="btn" href="https://cosmoa-dashboard.onrender.com" target="_blank" rel="noopener">COSMOA 대시보드 열기 ↗</a>
-          <span class="action-note">로그인 필요</span>
-        </div>
       </div>
       <figure class="proj-cover">
         <button class="frame frame--16x9" type="button">
@@ -235,13 +231,6 @@
         <h2 class="case-title">요청서마다 번역 · 조건 선별 · 재작성을 거치던 개발요청서 작성을, AI 초안을 검토하는 일로 바꿨습니다</h2>
 
         <p class="story">바이어 요청서는 언어와 양식이 제각각이라, 담당자는 1건을 받을 때마다 <strong>번역하고, 연구소에 필요한 조건을 골라내고, 연구소 양식에 맞춰 처음부터 다시 쓰는 3단계</strong>를 손으로 거쳐야 했습니다. 저는 OpenAI API를 연동해 <mark class="ai">요청서 PDF를 올리면 AI가 언어를 확인하고 필요한 정보를 뽑아 연구소용 개발요청서 초안을 채우는 탭을 구현</mark>했습니다. 담당자의 일이 ‘처음부터 쓰기’에서 ‘채워진 초안 확인 · 보완’으로 바뀌어, 요청서 1건에 1시간 반 걸리던 작성이 15분 검토로 줄었습니다.</p>
-
-        <figure class="evidence">
-          <button class="frame frame--16x9" type="button">
-            <img src="assets/cosmoa/case1-convert.png" alt="바이어 요청서 PDF를 업로드하자 파일 인식 → 언어 확인 → 정보 추출 순으로 개발요청서를 변환 중인 화면" loading="lazy">
-          </button>
-          <figcaption class="cap"><b>이 화면에서 볼 부분 —</b> PDF 요청서를 올리면 파일 인식 → 언어 확인 → 정보 추출 순서로 초안 작성이 진행됩니다.</figcaption>
-        </figure>
 
         <figure class="evidence">
           <div class="frame frame--16x9 frame--video">
@@ -308,15 +297,14 @@
           <li class="chip">미국 수출 마케팅</li>
           <li class="chip">담당: 캐릭터 · 제품 공동 기획 · 할로윈 콘텐츠 · 파트너 탭 구현</li>
         </ul>
-        <div class="actions">
-          <a class="btn" href="https://reboot-dashboard.onrender.com/" target="_blank" rel="noopener">REBOOT 마케팅 대시보드 열기 ↗</a>
-          <a class="btn btn--ghost" href="https://www.instagram.com/reboot_us/" target="_blank" rel="noopener">Instagram @reboot_us ↗</a>
-          <span class="action-note">대시보드는 로그인 필요</span>
-        </div>
       </div>
       <figure class="proj-cover">
-        <button class="frame frame--16x9 frame--dark" type="button">
-          <img src="assets/reboot/lineup.png" alt="REBOOT 제품 라인업: 젤리 Original, 음료 레몬 · 라임 · 체리, 젤리 Balance">
+        <!-- 재생 전에는 영상 첫 장면(Drive 썸네일)으로 멈춰 보이고, 누르면 Drive 영상 iframe으로 바뀐다 -->
+        <button class="frame frame--16x9 frame--dark frame--video video-poster" type="button"
+                data-video="https://drive.google.com/file/d/1chCGV-hAquinV2D6Er_aVMo2I08enm0M/preview"
+                aria-label="REBOOT 제품 라인업 영상 재생">
+          <img src="assets/reboot/lineup-video-poster.jpg" alt="REBOOT 제품 라인업 영상 첫 장면: 네온 무한대 로고 앞 젤리 Original, 음료 레몬 · 라임 · 체리, 젤리 Balance">
+          <span class="play-btn" aria-hidden="true"></span>
         </button>
       </figure>
     </header>
@@ -440,13 +428,6 @@
         </ol>
 
         <figure class="evidence">
-          <button class="frame frame--wide" type="button">
-            <img src="assets/reboot/case2-partner.png" alt="파트너 탭 협업 관리 화면: 왼쪽에 파트너 찾기 · 협업 관리 · 제안 작성 · 성과 메뉴, 표에 인플루언서에게 자동 발송한 영문 제안 메일 기록" loading="lazy">
-          </button>
-          <figcaption class="cap"><b>이 화면에서 볼 부분 —</b> 파트너 찾기부터 성과까지 한 탭 안에서 이어지고, 인플루언서에게 보낸 영문 제안 메일이 협업 관리에 바로 기록되는 화면입니다.</figcaption>
-        </figure>
-
-        <figure class="evidence">
           <div class="frame frame--16x9 frame--video">
             <iframe src="https://drive.google.com/file/d/1kLdl6jgINy-PoO6TXnhtwY2G-wAEJhOL/preview" title="REBOOT 파트너 탭 인플루언서 제안 시연 영상" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
           </div>
@@ -490,10 +471,6 @@
           <li class="chip">개인 프로젝트 · 헬스케어</li>
           <li class="chip">바이어 발굴 → 개발요청서 → 견적</li>
         </ul>
-        <div class="actions">
-          <a class="btn" href="https://healthcaresales-ssbj.vercel.app/" target="_blank" rel="noopener">건강기능식품 대시보드 열기 ↗</a>
-          <span class="action-note">로그인 없이 볼 수 있음 · 가상 데이터</span>
-        </div>
       </div>
       <figure class="proj-cover">
         <button class="frame frame--auto" type="button">
