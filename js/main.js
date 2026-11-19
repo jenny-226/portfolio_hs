@@ -55,7 +55,7 @@
     const poster = e.target.closest('.video-poster');
     if (poster) {
       const wrap = document.createElement('div');
-      wrap.className = poster.className.replace('video-poster', '').trim();
+      wrap.className = 'frame frame--16x9 frame--dark frame--video';
       const iframe = document.createElement('iframe');
       iframe.src = poster.dataset.video;
       iframe.title = poster.getAttribute('aria-label').replace(' 재생', '');

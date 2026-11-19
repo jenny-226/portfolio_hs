@@ -305,6 +305,7 @@ a.course-item:hover .go{ transform:translate(4px,-50%); }
 /* 재생 전 포스터 이미지 + 가운데 재생 버튼 */
 .video-poster{ cursor:pointer; }
 .video-poster img{ position:absolute; inset:0; object-fit:cover; }
+.video-poster--contain img{ object-fit:contain; }  /* 4:3 영상은 잘리지 않게 */
 .play-btn{
   position:absolute; left:50%; top:50%;
   width:64px; height:64px; margin:-32px 0 0 -32px;
@@ -544,7 +545,7 @@ a.course-item:hover .go{ transform:translate(4px,-50%); }
 .metrics-label{ font-family:var(--mono); font-size:12px; font-weight:600; letter-spacing:.06em; color:var(--accent); }
 .metrics-grid{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:var(--gap); margin:12px 0 0; padding:0; list-style:none; }
 .metric{
-  display:grid; gap:14px; align-content:start;
+  display:flex; flex-direction:column; justify-content:space-between; gap:14px;
   padding:28px 32px;
   border:1px solid var(--line); border-radius:var(--radius);
   background:var(--card);
@@ -567,6 +568,10 @@ a.course-item:hover .go{ transform:translate(4px,-50%); }
 .metric--rate-first .metric-to{ font-size:22px; }
 /* 수치 옆 측정 기준 주석 */
 .metric-basis{ font-size:12.5px; line-height:1.6; color:var(--muted); }
+/* 좌우 카드의 하단 기준 배지를 같은 바닥선에 맞춤 */
+.metric-time + .metric-basis,
+.metric-rate + .metric-basis{ margin-top:auto; }
+.metric-basis + .metric-basis{ margin-top:-8px; }
 .metric-basis span{
   display:inline-block; margin-right:8px; padding:0 6px;
   border:1px solid var(--line); border-radius:4px;
