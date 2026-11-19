@@ -65,7 +65,7 @@ body:has(#tab-cosmoa:not([hidden])) .tab[aria-current="page"]{ color:var(--accen
 /* 강조: 굵게(800) + 진한 글자 / AI 부분은 btn-soft처럼 옅은 블루 칩 */
 #tab-cosmoa .story strong{ box-shadow:none; font-weight:800; color:var(--ink); }
 #tab-cosmoa .story mark.ai{ background:var(--accent-soft); color:var(--accent); padding:1px 6px; border-radius:6px; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
-#tab-cosmoa .story mark.key{ background:var(--soft); color:var(--ink); font-weight:800; }
+#tab-cosmoa .story mark.key{ background:var(--accent-soft); color:var(--accent); padding:1px 6px; border-radius:6px; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
 
 #tab-cosmoa .metrics{ margin-top:32px; }
 #tab-cosmoa .metrics-label{ letter-spacing:0; font-weight:800; font-size:14px; }
@@ -132,8 +132,9 @@ body:has(#tab-reboot:not([hidden])) .tab[aria-current="page"]{ color:var(--accen
 /* 강조: 라임 글자 (원본 em · b 방식) / 굵은 문장은 흰 글자 */
 #tab-reboot .story strong{ box-shadow:none; color:#fff; font-weight:700; }
 #tab-reboot .story mark.ai{ background:none; color:var(--accent); font-weight:700; }
-#tab-reboot .story mark.key{ background:none; color:var(--accent); font-weight:500; }
-#tab-reboot .ig-lead strong{ box-shadow:none; color:var(--accent); font-weight:500; }
+#tab-reboot .story mark.key,
+#tab-reboot .ig-lead mark.ai{ background:none; color:var(--accent); font-weight:700; }
+#tab-reboot .ig-lead strong{ box-shadow:none; color:#fff; font-weight:700; }
 
 #tab-reboot .gallery{ border-color:var(--line); }
 #tab-reboot .gallery-info{ border-color:var(--line); }
@@ -199,9 +200,9 @@ body:has(#tab-health:not([hidden])) .tab[aria-current="page"]{ color:#fff; borde
 #tab-health .method{ border-radius:6px; font-size:12px; font-weight:600; padding:1px 8px; line-height:1.6; }
 #tab-health .method--data{ background:var(--soft); color:#475467; }
 #tab-health .method--rule{ border-color:#D0D5DD; color:#475467; }
-/* 강조: 블루 굵게 (cost-sel · cost-ok 방식) / 핵심 구간은 회색 배지 */
-#tab-health .story strong{ box-shadow:none; color:var(--accent); font-weight:700; }
-#tab-health .story mark.key{ background:var(--soft); color:var(--ink); font-weight:700; border-radius:6px; }
+/* 페인포인트 = 진한 글자 굵게 / 내가 한 일 = 옅은 블루 바탕 블루 글자 (번호 태그 req-no 방식) */
+#tab-health .story strong{ box-shadow:none; color:var(--ink); font-weight:700; }
+#tab-health .story mark.key{ background:var(--accent-soft); color:var(--accent); font-weight:700; padding:1px 6px; border-radius:6px; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
 
 #tab-health .metrics{ margin-top:32px; }
 #tab-health .metrics-label{ letter-spacing:0; font-weight:700; }
