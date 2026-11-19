@@ -30,7 +30,8 @@ body:has(#tab-cosmoa:not([hidden])){
   --gray-tint:#F9FAFB;     /* color-surface-muted */
   --accent-soft:#E8F3FF;   /* color-primary-soft (블루 농도 단계) */
   --radius:24px;
-  --font:"NanumSquare Neo","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  /* 영문 · 숫자는 Satoshi, 한글은 Satoshi에 없으므로 NanumSquare Neo로 자동 대체 */
+  --font:"Satoshi","NanumSquare Neo","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
   --mono:var(--font);      /* 코스모아는 고정폭 글꼴을 쓰지 않음 */
 }
 body:has(#tab-cosmoa:not([hidden])) .site-header{ background:rgba(242,244,246,.92); border-bottom-color:transparent; }
