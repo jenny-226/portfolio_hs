@@ -83,7 +83,7 @@
                 <span class="course-item-title">COSMOA <span class="badge-award">1위</span></span>
                 <span class="course-item-desc">화장품 ODM 해외영업 대시보드</span>
                 <span class="dot-list">
-                  <span>요청서 정리 · 조건 대조: 매번 번역 · 재작성하고 탭 3곳을 오가며 대조하던 업무 → AI 초안 생성과 조건 자동 연동으로 한 번에 검토</span>
+                  <span>요청서 정리 · 조건 연동: 매번 처음부터 다시 쓰던 개발요청서를 AI 초안 검토로 바꾸고, 탭마다 따로 입력하던 조건을 한 곳에서 입력하도록 연동</span>
                 </span>
                 <span class="go" aria-hidden="true">→</span>
               </a>
@@ -94,7 +94,7 @@
                 <span class="course-item-title">REBOOT <span class="badge-award">1위</span></span>
                 <span class="course-item-desc">미국 수출 마케팅 프로젝트</span>
                 <span class="dot-list">
-                  <span>리브랜딩 · 인플루언서 제안: 낯선 ‘숙취해소제’를 파티 아이템으로 재해석하고, 흩어져 있던 후보 탐색 · 영문 메일 · 금지 표현 확인을 파트너 탭 한 화면에 통합</span>
+                  <span>리브랜딩 · 인플루언서 제안: 이름만으로 사용 장면이 드러나지 않는 숙취해소제를 파티 아이템으로 재해석하고, 흩어져 있던 후보 탐색 · 영문 메일 · 금지 표현 확인을 파트너 탭 한 흐름으로 연결</span>
                 </span>
                 <span class="go" aria-hidden="true">→</span>
               </a>
@@ -113,7 +113,7 @@
               <a class="course-item" href="#health">
                 <span class="course-item-title">건강기능식품 해외영업 대시보드</span>
                 <span class="dot-list">
-                  <span>제안~개발요청서 · 안정성 검토: 흩어진 업체 조회 · 제안부터 개발요청서 변환까지 한 흐름으로 잇고, 누락되던 R&amp;D 안정성 시험 조건을 시뮬레이션 · 미입력 분리로 빈틈없이 전달</span>
+                  <span>제안 전 바이어 선정 · 안정성 조건: 생산 가능 여부와 규제로 바이어를 먼저 고르고, 수출국 기후별 안정성 시험 조건을 나눠 R&amp;D에 요청</span>
                 </span>
                 <span class="go" aria-hidden="true">→</span>
               </a>
@@ -230,9 +230,9 @@
         <span class="method method--ai">AI로 해결</span>
       </div>
       <div class="case-main">
-        <h2 class="case-title">요청서마다 번역 · 조건 선별 · 재작성을 거치던 개발요청서 작성을, AI 초안을 검토하는 일로 바꿨습니다</h2>
+        <h2 class="case-title">요청서마다 처음부터 다시 쓰던 개발요청서를, AI 초안을 담당자가 검토해 확정하는 방식으로 바꿨습니다</h2>
 
-        <p class="story">바이어 요청서는 언어와 양식이 제각각이라, 담당자는 1건을 받을 때마다 <strong>번역하고, 연구소에 필요한 조건을 골라내고, 연구소 양식에 맞춰 처음부터 다시 쓰는 3단계</strong>를 손으로 거쳐야 했습니다. 저는 OpenAI API를 연동해 <mark class="ai">요청서 PDF를 올리면 AI가 언어를 확인하고 필요한 정보를 뽑아 연구소용 개발요청서 초안을 채우는 탭을 구현</mark>했습니다. 번역 · 조건 선별 · 재작성 3단계를 AI 초안 생성과 담당자 검토 1단계로 바꿔, 담당자는 처음부터 쓰는 대신 채워진 초안을 확인하고 보완만 하면 됩니다.</p>
+        <p class="story">프로젝트에서 다룬 바이어 요청서는 언어와 양식이 제각각이라, <strong>1건마다 번역하고 필요한 조건을 골라 연구소 양식으로 다시 써야 했습니다.</strong> 요청서마다 반복되고, 조건을 잘못 옮기면 연구소에 넘긴 뒤 다시 작성해야 하는 일이라 가장 먼저 줄일 작업으로 정했습니다. 저는 OpenAI API를 연동해 <mark class="ai">요청서 PDF에서 조건을 뽑아 연구소용 개발요청서 초안을 채우는 탭을 구현</mark>했고, 제품 조건은 연구소 개발의 출발점이므로 담당자가 원문과 대조해 확정하도록 검토 단계를 남겼습니다. 처음부터 쓰던 일이 초안을 검토 · 보완하는 일로 바뀌어, 시연 요청서 3건 기준 1건당 작성 시간이 1시간 30분에서 15분으로 줄었습니다.</p>
 
         <figure class="evidence">
           <button class="frame frame--16x9 frame--dark frame--video video-poster video-poster--contain" type="button"
@@ -253,9 +253,9 @@
         <span class="method method--data">데이터 연동으로 해결</span>
       </div>
       <div class="case-main">
-        <h2 class="case-title">탭 3곳을 오가며 눈으로 대조하던 규제 · 제형 조건 확인을, 한 번 적으면 그대로 이어지게 바꿨습니다</h2>
+        <h2 class="case-title">탭마다 따로 입력하던 조건을 한 곳에서 입력하게 하고, 어긋나거나 빠진 항목은 ‘확인 필요’로 표시했습니다</h2>
 
-        <p class="story">개발요청서 · 규제 · 제형 정보가 각각 다른 탭에 있어, 담당자는 <strong>탭 3곳을 오가며 조건을 눈으로 맞춰 봐야 했고, 놓친 조건은 연구소에 넘어간 뒤 되돌아왔습니다.</strong> 저는 개발요청서 · 규제 · 제형 데이터를 하나로 연동해, <mark class="key">요청서에 한 번 적은 조건이 규제 탭과 AI 제형 시뮬레이션 탭에 그대로 이어지고, 어긋나거나 빠진 조건은 요청서 화면에서 ‘확인 필요’로 자동 분리되도록</mark> 만들었습니다. 담당자는 탭을 오가며 모든 항목을 눈으로 대조하는 대신, 자동으로 걸러진 확인 필요 항목과 수출국 규제 알림만 보고 연구소에 넘기기 전에 바로잡습니다.</p>
+        <p class="story">개발요청서 · 규제 · 제형 조건이 서로 다른 탭에 있어 <strong>같은 조건을 탭마다 따로 입력해야 했고, 한쪽만 고친 채 연구소로 넘어갈 수 있었습니다.</strong> 탭을 오가는 번거로움보다 서로 다른 조건이 전달되는 위험이 더 크다고 보고 이 문제를 먼저 다뤘습니다. 저는 <mark class="key">요청서에 한 번 입력한 조건이 규제 탭과 AI 제형 시뮬레이션 탭에 그대로 이어지도록 연결해 입력 위치를 하나로 줄이고, 탭 사이에 어긋나거나 빠진 항목은 요청서 화면에 ‘확인 필요’로 표시</mark>했습니다. 시연 요청서 1건에서는 27개 항목 중 3건이 표시되어, 연구소에 넘기기 전에 그 항목부터 바로잡을 수 있었습니다.</p>
 
         <figure class="evidence">
           <button class="frame frame--16x9" type="button">
@@ -271,16 +271,16 @@
       <p class="metrics-label">RESULT · 이렇게 달라졌습니다</p>
       <ul class="metrics-grid">
         <li class="metric metric--rate-first">
-          <p class="metric-key"><span class="metric-no">01</span>요청서 1건 → 개발요청서 초안</p>
-          <p class="metric-rate"><b>83%</b> 단축</p>
+          <p class="metric-key"><span class="metric-no">01</span>요청서 1건당 개발요청서 작성 시간</p>
+          <p class="metric-rate"><b>83%</b> 단축 · 시연 요청서 3건 평균</p>
           <p class="metric-time"><span class="metric-from">1시간 30분</span><span class="metric-arrow" aria-hidden="true">→</span><b class="metric-to">15분</b></p>
-          <p class="metric-basis"><span>측정 기준</span>요청서 3건 평균 · 번역부터 연구소 양식 완성까지 · 시연 화면 기준</p>
+          <p class="metric-basis"><span>측정 기준</span>직접 작성: 번역부터 연구소 양식 완성까지 · 탭 사용: PDF 업로드부터 담당자 검토 완료까지</p>
         </li>
         <li class="metric metric--rate-first">
-          <p class="metric-key"><span class="metric-no">02</span>연구소 전달 전 조건 대조</p>
-          <p class="metric-rate"><b>89%</b> 감소</p>
-          <p class="metric-time"><span class="metric-from">확인 항목 27개</span><span class="metric-arrow" aria-hidden="true">→</span><b class="metric-to">3개</b></p>
-          <p class="metric-basis"><span>측정 기준</span>개발요청서 1건 전체 27개 항목 중 ‘확인 필요’ 자동 표시 항목 수 · 시연 화면 기준</p>
+          <p class="metric-key"><span class="metric-no">02</span>연구소에 넘길 조건의 입력 위치</p>
+          <p class="metric-rate"><b>3곳 → 1곳</b> 조건 입력</p>
+          <p class="metric-time"><span class="metric-from">27개 항목 중</span><b class="metric-to">3건 ‘확인 필요’ 표시</b></p>
+          <p class="metric-basis"><span>측정 기준</span>한 번 입력한 조건이 개발요청서 · 규제 · 제형 탭에 연동 · 시연 요청서 1건</p>
         </li>
       </ul>
     </section>
@@ -299,7 +299,7 @@
       <div class="proj-info">
         <p class="eyebrow">PROJECT 02 · KITA 무역 AX 마스터 2기 · AX 2차 팀 프로젝트</p>
         <h1 class="proj-title">REBOOT</h1>
-        <p class="proj-summary">미국 소비자에게 낯선 숙취해소제를 생성형 AI로 친숙한 브랜드 · 제품으로 시각화하고, 흩어진 인플루언서 · 파트너 협업 준비를 대시보드의 파트너 탭으로 모았습니다</p>
+        <p class="proj-summary">이름만으로 사용 장면이 드러나지 않는 숙취해소제를 파티 · 서부 콘셉트의 브랜드 · 제품으로 시각화하고, 흩어진 인플루언서 · 파트너 협업 준비를 대시보드의 파트너 탭으로 모았습니다</p>
         <p class="proj-meta"><span class="badge-award">1위 · 팀 수상</span><span class="mono-label">2026.11.02 수상</span></p>
         <ul class="chips">
           <li class="chip">미국 수출 마케팅</li>
@@ -331,10 +331,10 @@
         <span class="method method--ai">AI로 해결</span>
       </div>
       <div class="case-main">
-        <h2 class="case-title">‘숙취해소’를 설명하지 않고, 미국인에게 익숙한 파티 · 서부 문화로 옮겨 소개했습니다</h2>
+        <h2 class="case-title">이름만으로는 떠오르지 않는 사용 장면을, 파티와 서부 이미지로 보여 주기로 했습니다</h2>
 
         <div class="case-split">
-        <p class="story">한국에서는 익숙한 숙취해소제도 미국에서는 <strong>이름만으로 무엇인지 전해지지 않아, 제품보다 개념부터 설명해야 했습니다.</strong> 저는 효능을 말로 설명하는 대신 제품이 쓰이는 장면을 보여 주기로 하고, 그 장면을 미국인에게 가장 익숙한 술자리인 파티로, 브랜드 분위기는 서부(카우보이) 문화로 정했습니다. 음료는 파티 테이블에 놓이는 술병 모양, 젤리는 카우보이 부츠 · 모자 모양으로 정해 <mark class="ai">캐릭터 Rebu와 함께 생성형 AI로 공동 기획</mark>했습니다. 그 결과 설명 없이 보여 주기만 해도 ‘파티에 챙겨 가는 아이템’으로 읽히는 브랜드가 됐고, 이 콘셉트를 할로윈 캠페인과 인플루언서 제안까지 그대로 이어 썼습니다.</p>
+        <p class="story">미국 시장에 숙취해소제를 소개하는 과제를 검토하며, <strong>이름만으로는 언제 · 어떻게 쓰는 제품인지 떠오르지 않는다는 점</strong>을 문제로 설정했습니다. 그래서 효능 설명보다 사용 장면을 먼저 보여 주기로 하고, 장면은 숙취가 생기는 자리이자 제품을 자연스럽게 챙길 수 있는 파티로, 시각 모티브는 미국에서 친숙한 서부 이미지로 정했습니다. 저는 팀원들과 이 기준에 맞춰 <mark class="ai">술병 모양 음료, 부츠 · 모자 모양 젤리, 캐릭터 Rebu를 기획하고 생성형 AI로 시안을 제작</mark>했습니다. 기준을 먼저 정해 두었기에 6인 팀이 5일 동안 91개 콘텐츠를 같은 톤으로 제작했고, 이 콘셉트를 할로윈 캠페인과 인플루언서 제안에도 이어 썼습니다.</p>
 
         <figure class="evidence">
           <div class="gallery" data-gallery>
@@ -381,8 +381,6 @@
     <section class="ig" id="reboot-instagram" aria-label="REBOOT Instagram 운영">
       <div class="ig-head">
         <p class="eyebrow">INSTAGRAM · 할로윈 캠페인</p>
-        <h2 class="sec-title">실물 제품도 촬영도 없이, 파티가 몰리는 할로윈에 맞춰 첫 캠페인을 열었습니다</h2>
-        <p class="ig-lead">REBOOT는 실물 제품도, 촬영할 장면도 없는 상태에서 <strong>미국에서 파티가 가장 몰리는 할로윈 시즌에 맞춰 첫 캠페인을 내보내야 했습니다.</strong> 저는 <mark class="ai">촬영 대신 생성형 AI로 만든 캐릭터 Rebu와 제품을 할로윈 파티 장면에 담고, 처음 보는 제품도 부담 없이 시도해 볼 수 있도록 할인 혜택을 함께 보여주는 게시물로 기획</mark>했습니다. 그 결과 실물 촬영 없이도 시즌 타이밍을 놓치지 않고, 리브랜딩한 ‘파티 아이템’ 콘셉트를 할인 이벤트로 미국 소비자에게 처음 선보였습니다.</p>
         <a class="btn ig-btn" href="https://www.instagram.com/reboot_us/" target="_blank" rel="noopener">REBOOT Instagram 바로가기 ↗ <span class="ig-handle">@reboot_us</span></a>
       </div>
 
@@ -428,9 +426,9 @@
         <span class="method method--ai">AI로 해결</span>
       </div>
       <div class="case-main">
-        <h2 class="case-title">후보 찾기 · 영문 메일 · 표현 규정 확인을 3곳에서 오가던 인플루언서 제안 준비를, 파트너 탭 한 화면으로 이었습니다</h2>
+        <h2 class="case-title">제안할 때마다 다시 쓰던 브랜드 정보와 놓치기 쉬운 규제 표현을, 파트너 탭 하나의 흐름으로 묶었습니다</h2>
 
-        <p class="story">미국 인플루언서에게 제안하려면 <strong>후보 찾기 · 영문 메일 작성 · 효능 과장 표현 확인을 각각 다른 곳에서 해야 해, 제안할 때마다 브랜드 정보를 영어로 다시 쓰고 규정을 따로 대조했습니다.</strong> 저는 인플루언서 · 브랜드 정보와 규제 탭 데이터를 연동해, <mark class="ai">AI가 금지 문구를 피해 영문 제안 메일을 쓰고 후보 탐색부터 협업 관리까지 한 화면에서 이어지는 파트너 탭을 구현</mark>했습니다. 후보 탐색 → 영문 메일 → 금지 표현 검수가 한 흐름으로 이어져, 담당자는 3곳을 오가며 다시 쓰는 대신 AI 초안과 가이드를 확인한 뒤 바로 발송합니다.</p>
+        <p class="story">미국 인플루언서에게 제안하려면 후보 탐색 · 영문 메일 작성 · 효능 표현 확인을 각각 다른 곳에서 해야 했습니다. 그중 <strong>매번 브랜드 정보를 영어로 다시 쓰는 반복과, 발송하고 나면 되돌릴 수 없는 과장 표현을 놓치는 지점</strong>을 먼저 다뤘습니다. 저는 후보 · 브랜드 정보와 규제 탭의 금지 표현 데이터를 연결해 <mark class="ai">AI가 영문 제안 초안을 쓰는 파트너 탭을 구현</mark>하고, 발송 전에는 담당자가 초안과 표현 가이드를 확인하도록 했습니다. 시연에서 인플루언서 5명에게 보낼 제안을 준비해 보니, 후보 선정부터 발송 직전 검토까지 1명당 1시간 5분 걸리던 과정이 10분으로 줄었습니다.</p>
         <ol class="flow" aria-label="파트너 탭 흐름">
           <li>후보 탐색</li><li>영문 제안</li><li>가이드 검토</li><li>협업 관리</li>
         </ol>
@@ -452,17 +450,17 @@
       <p class="metrics-label">RESULT · 이렇게 달라졌습니다</p>
       <ul class="metrics-grid">
         <li class="metric metric--rate-first">
-          <p class="metric-key"><span class="metric-no">01</span>낯선 숙취해소제 리브랜딩 콘텐츠 제작</p>
-          <p class="metric-rate"><b>5일 · 91개</b></p>
-          <p class="metric-time"><span class="metric-from">콘셉트 기준 1개</span><span class="metric-arrow" aria-hidden="true">→</span><b class="metric-to">6인 팀 생성형 AI 공동 제작</b></p>
-          <p class="metric-basis"><span>측정 기준</span>‘파티 장면 · 서부 콘셉트’를 기준으로 먼저 정해, 실물 촬영 없이 같은 톤으로 제작한 콘텐츠 수</p>
+          <p class="metric-key"><span class="metric-no">01</span>콘셉트 기준 하나로 만든 6인 팀 리브랜딩 콘텐츠</p>
+          <p class="metric-rate"><b>5일 · 91개</b> 팀 콘텐츠</p>
+          <p class="metric-time"><span class="metric-from">‘파티 · 서부’ 기준으로</span><b class="metric-to">실물 촬영 없이 같은 톤</b></p>
+          <p class="metric-basis"><span>측정 기준</span>6인 팀 공동 제작 콘텐츠 수 · 생성형 AI 활용</p>
           <p class="metric-basis"><span>적용 범위</span>브랜드 콘셉트 · 캐릭터 · 제품 2종 리브랜딩</p>
         </li>
         <li class="metric metric--rate-first">
-          <p class="metric-key"><span class="metric-no">02</span>인플루언서 영문 제안 준비</p>
-          <p class="metric-rate"><b>85%</b> 단축</p>
+          <p class="metric-key"><span class="metric-no">02</span>인플루언서 1명당 영문 제안 준비 시간</p>
+          <p class="metric-rate"><b>85%</b> 단축 · 시연 5명 평균</p>
           <p class="metric-time"><span class="metric-from">1시간 5분</span><span class="metric-arrow" aria-hidden="true">→</span><b class="metric-to">10분</b></p>
-          <p class="metric-basis"><span>측정 기준</span>인플루언서 5명 평균 · 후보 선정부터 금지 표현 확인 후 발송 직전까지 · 시연 화면 기준</p>
+          <p class="metric-basis"><span>측정 기준</span>후보 선정부터 금지 표현 확인 후 발송 직전 검토까지 · 인플루언서 5명</p>
         </li>
       </ul>
     </section>
@@ -481,10 +479,10 @@
       <div class="proj-info">
         <p class="eyebrow">PROJECT 03 · 개인 프로젝트</p>
         <h1 class="proj-title proj-title--long">건강기능식품 해외영업 대시보드</h1>
-        <p class="proj-summary">흩어져 있던 업체 조회 · 제안 · 개발요청서 변환을 하나의 흐름으로 잇고, 생균 제형의 안정성 검토 조건을 빠짐없이 R&amp;D에 넘기도록 시뮬레이션으로 만들었습니다</p>
+        <p class="proj-summary">만들 수 있고 팔 수 있는 바이어를 제안 전에 골라 개발요청서까지 잇고, 일본 · 베트남 · 미국의 기후 차이에 맞춘 안정성 시험 조건을 R&amp;D에 요청하도록 했습니다</p>
         <ul class="chips">
           <li class="chip">개인 프로젝트 · 헬스케어</li>
-          <li class="chip">업체 조회 · 제안 → 개발요청서 → 안정성 검토</li>
+          <li class="chip">바이어 선정 → 개발요청서 → 수출국별 안정성 검토</li>
         </ul>
       </div>
       <figure class="proj-cover">
@@ -501,11 +499,11 @@
         <span class="method method--data">워크플로우 통합으로 해결</span>
       </div>
       <div class="case-main">
-        <h2 class="case-title">흩어진 업체 정보 · 제안 이력과 끊어진 수작업을, 업체 조회부터 개발요청서 변환까지 한 흐름으로 이었습니다</h2>
+        <h2 class="case-title">우리가 만들 수 있고 그 나라에서 팔 수 있는 제품을 원하는 바이어를, 제안 전에 먼저 골라내도록 했습니다</h2>
 
-        <p class="story">브랜드사 · D2C 브랜드 · 유통사 · 수입사 · PB 운영사 · 약국 체인처럼 유형이 다른 업체와 협업하다 보니, <strong>관리 중인 업체 정보와 제안 이력이 흩어져 있어 바로 조회하기 어려웠고, 제안 메일 발송부터 바이어 제안서를 받아 개발요청서로 옮기는 과정까지 단계마다 수작업으로 끊어져 있었습니다.</strong> 저는 이 흐름을 직접 설계해, <mark class="key">업체 유형별 필터 조회와 6개 영업 적합도 기준으로 협업 대상을 바로 찾고, 한 화면에서 제안 메일 발송과 관리 중인 업체 전체 현황을 관리하며, 바이어 제안서를 받으면 개발요청서로 바로 변환하는 통합 흐름을 구현</mark>했습니다.</p>
+        <p class="story">일본 · 베트남 · 미국에서 건강기능식품이 가장 많이 팔리는 경로를 기준으로 드럭스토어 · 약국 체인, 온라인 D2C 브랜드, 수입 · 유통사를 주요 바이어로 정했습니다. 이 바이어들은 원하는 제품군과 진출 국가가 제각각이라, <strong>생산할 수 없는 제형이나 그 나라 규제에 맞지 않는 제품을 제안하면 요청서를 받은 뒤에야 진행이 멈출 수 있었습니다.</strong> 그래서 요청서를 받은 뒤 확인하던 생산 가능 여부와 규제를 제안 전 단계로 앞당겨, <mark class="key">기준 제품을 고르면 제품군 일치 · 제형 생산 가능 여부 · 수출국 규제 등록 여부로 매긴 적합도 순으로 바이어를 보여 주고 근거를 함께 표시</mark>했습니다. 선정한 바이어에게서 받은 제안서는 같은 제품 정보로 개발요청서까지 바로 이어집니다.</p>
         <ol class="flow" aria-label="바이어 발굴 · 관리 흐름">
-          <li>업체 조회</li><li>제안 메일 발송</li><li>업체 현황 관리</li><li>개발요청서 변환</li>
+          <li>바이어 선정</li><li>제안 메일 발송</li><li>업체 현황 관리</li><li>개발요청서 변환</li>
         </ol>
 
         <figure class="evidence">
@@ -524,15 +522,15 @@
         <span class="method method--rule">시뮬레이션 · 검증으로 해결</span>
       </div>
       <div class="case-main">
-        <h2 class="case-title">‘상온’ 한마디로 넘기던 안정성 조건을, 4대 기준과 R&amp;D 검토 요청사항으로 빠짐없이 넘기게 했습니다</h2>
+        <h2 class="case-title">‘상온’ 한 단어로 묶던 보관 조건을, 수출국 기후에 맞춰 나눠 R&amp;D에 요청하도록 했습니다</h2>
 
-        <p class="story">건강기능식품, 특히 생균 제형을 수출할 때 영업 담당자가 <strong>‘상온’이라는 모호한 표현으로 온도를 단정하거나, 수분함량과 수분활성도(aw)를 혼동하거나, 개별 포장의 차단성(투과도 · 밀봉성 · 건조제)을 빠뜨리면, 안정성 시험 조건이 누락된 채 R&amp;D 단계에서 되돌아왔습니다.</strong> 저는 <mark class="key">균주 · 제형 · 보관 조건을 입력하면 제형 적합성 · 온도 · 수분활성도 · 포장 4대 검토 기준을 바로 안내하고, 입력된 조건과 누락된 조건을 구분해 ‘R&amp;D 검토 요청사항’ 5개 항목을 자동으로 만드는 제형 · 안정성 시뮬레이션 탭을 구현</mark>했습니다. 값이 입력되지 않았거나 조건이 일치하는 시험자료가 없으면 AI가 추측해 채우지 않고 ‘미입력’ · ‘조건 일치 시험자료 없음’으로 분리했고, ‘개발요청서에 검토사항 저장’ 버튼 한 번으로 개발요청서의 R&amp;D 회신 항목에 반영되게 했습니다.</p>
+        <p class="story">생균 제형은 온도 · 습도 · 포장 차단성에 따라 균수가 줄어드는 속도가 달라지고, 일본 · 미국과 고온다습한 베트남은 안정성 시험 기후 조건부터 다릅니다. 그런데 영업 단계에서는 ‘상온 보관’ 하나로 조건이 전달되기 쉬워, <strong>국내 기준으로 정한 유통기한이 베트남에서는 맞지 않아 제품 등록 단계에서 다시 시험해야 할 수 있었습니다.</strong> 그래서 <mark class="key">균주 · 제형 · 포장 조건을 입력하면 수출국별 온도 · 습도에 따른 보관기간별 균수 변화 시나리오와 포장 검토사항을 보여 주고, 이를 국가별 ‘R&amp;D 검토 요청사항’으로 개발요청서에 저장</mark>하도록 했습니다. 영업 담당자는 바이어에게 유통기한을 말하기 전에 어느 나라에 어떤 시험 조건이 필요한지 알 수 있고, 최종 시험 조건은 R&amp;D가 정합니다.</p>
 
         <figure class="evidence">
           <button class="frame frame--auto" type="button">
             <img src="assets/health/case2-simulation.png" alt="AI 안정형 시뮬레이터 화면: 왼쪽 개발 조건의 균주 · 보관 온도 · 포장 · 수분활성도가 ‘미입력’으로 표시되고, 오른쪽 분석 결과에 ‘R&amp;D 검토 필요 · 안정성 확정 보류’, 입력 조건 일치 0건, 온도 · 수분활성도 · 포장 검토사항이 안내된 모습" loading="eager">
           </button>
-          <figcaption class="cap"><b>이 화면에서 볼 부분 —</b> 비어 있는 조건은 추측하지 않고 ‘미입력’으로 남기고, 오른쪽에서 ‘R&amp;D 검토 필요’와 온도 · 수분활성도 · 포장 검토사항을 안내하는 부분입니다.</figcaption>
+          <figcaption class="cap"><b>이 화면에서 볼 부분 —</b> 왼쪽에서 균주 · 보관 온도 · 포장 · 수분활성도 조건을 받고, 오른쪽에서 R&amp;D에 요청할 온도 · 수분활성도 · 포장 검토사항을 안내하는 부분입니다.</figcaption>
         </figure>
       </div>
     </article>
@@ -542,25 +540,25 @@
       <p class="metrics-label">RESULT · 이렇게 달라졌습니다</p>
       <ul class="metrics-grid">
         <li class="metric metric--rate-first">
-          <p class="metric-key"><span class="metric-no">01</span>업체 조회 · 제안 → 개발요청서 변환</p>
-          <p class="metric-rate"><b>79%</b> 단축</p>
+          <p class="metric-key"><span class="metric-no">01</span>바이어 선정 → 개발요청서 저장 시간</p>
+          <p class="metric-rate"><b>79%</b> 단축 · 3회 시연 평균</p>
           <p class="metric-time"><span class="metric-from">2시간</span><span class="metric-arrow" aria-hidden="true">→</span><b class="metric-to">25분</b></p>
-          <p class="metric-basis"><span>측정 기준</span>관리 업체 12곳 · 바이어 제안서 1건 · 업체 조회부터 개발요청서 저장까지 · 3회 시연 평균</p>
+          <p class="metric-basis"><span>측정 기준</span>생산 가능 여부 · 규제 확인을 제안 전에 포함 · 드럭스토어 · 약국 체인, 온라인 D2C 브랜드, 수입 · 유통사 대상</p>
         </li>
         <li class="metric metric--rate-first">
-          <p class="metric-key"><span class="metric-no">02</span>R&amp;D 전달 전 안정성 검토 조건</p>
-          <p class="metric-rate"><b>40/40개</b> 전달</p>
-          <p class="metric-time"><span class="metric-from">확인 안 된 조건 11개</span><span class="metric-arrow" aria-hidden="true">→</span><b class="metric-to">추측 없이 ‘미입력’ 표시</b></p>
-          <p class="metric-basis"><span>측정 기준</span>균주 · 제형 · 보관 조건 시뮬레이션 8건 × R&amp;D 검토 요청사항 5개</p>
+          <p class="metric-key"><span class="metric-no">02</span>수출국별 안정성 시험 조건</p>
+          <p class="metric-rate"><b>3개국 · 2개</b> 시험 조건</p>
+          <p class="metric-time"><span class="metric-from">‘상온’ 하나</span><span class="metric-arrow" aria-hidden="true">→</span><b class="metric-to">25°C/60%RH · 30°C/75%RH</b></p>
+          <p class="metric-basis"><span>측정 기준</span>일본 · 미국 25°C/60%RH, 베트남 30°C/75%RH · ICH 안정성 시험 기후대(Zone II · IVb) 기준</p>
         </li>
       </ul>
     </section>
 
     <div class="contrib">
       <span class="contrib-label">직무 연결 · 해외영업</span>
-      <p>업체 유형과 제안 이력을 바로 찾아 근거 있게 제안하고, 바이어 요청을 R&amp;D가 다시 묻지 않도록 안정성 검토 조건까지 담은 개발요청서로 넘기겠습니다.</p>
+      <p>만들 수 있고 팔 수 있는 바이어를 근거로 골라 제안하고, 수출국마다 다른 안정성 조건까지 담은 개발요청서로 R&amp;D에 넘기겠습니다.</p>
     </div>
-    <p class="footnote">* 결과 수치는 가상 데이터로 대시보드 흐름을 시연한 기준입니다. 안정성 시뮬레이션은 사전검토용 안내이며, 최종 시험 조건은 R&amp;D가 정합니다.</p>
+    <p class="footnote">* 안정성 시뮬레이션은 사전검토용 안내이며, 최종 시험 조건은 R&amp;D가 정합니다.</p>
   </section>
 
 </main>
